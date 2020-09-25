@@ -12,8 +12,6 @@ const main = async () => {
   const lights = await lifxService.ListLights()
   const quote = await yahooFinance.QueryTicker(TICKER)
 
-  console.log({quote})
-
   lights.forEach(light => {
     lifxService.SetLightColor(
       light.id,
@@ -22,5 +20,6 @@ const main = async () => {
   })
 }
 
-
-main()
+setInterval(() => {
+  main()
+}, 60 * 1000)

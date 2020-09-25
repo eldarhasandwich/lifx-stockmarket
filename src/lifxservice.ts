@@ -24,10 +24,4 @@ export class LifxService {
         color
       })
   }
-
-
 }
-
-
-
-
