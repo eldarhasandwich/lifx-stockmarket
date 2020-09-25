@@ -1,0 +1,29 @@
+{
+  "name": "lifx-stockmarket",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "ts-node index.ts"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/eldarhasandwich/lifx-stockmarket.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/eldarhasandwich/lifx-stockmarket/issues"
+  },
+  "homepage": "https://github.com/eldarhasandwich/lifx-stockmarket#readme",
+  "dependencies": {
+    "superagent": "^6.1.0",
+    "ts-node": "^9.0.0",
+    "typescript": "^4.0.3",
+    "uuidv4": "^6.2.3"
+  },
+  "devDependencies": {
+    "@types/superagent": "^4.1.10"
+  }
+}
