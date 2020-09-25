@@ -1,7 +1,5 @@
 
 import * as agent from 'superagent'
-import { uuid } from 'uuidv4'
-
 
 export class LifxService {
   constructor() {}
@@ -25,12 +23,8 @@ export class LifxService {
       .send({
         color
       })
-
-    console.log({response})
-
-
-    
   }
+
 
 }
 
