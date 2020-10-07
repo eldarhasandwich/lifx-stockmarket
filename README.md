@@ -2,7 +2,7 @@
 
 ### Usage
 ```
-LIFX_CLIENT_ID=<your client id> npm start
+npm start
 ```
 
 ## API Reference

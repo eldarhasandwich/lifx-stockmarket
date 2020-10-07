@@ -4,7 +4,7 @@ import * as y from './src/yahoofinance'
 
 const main = async () => {
 
-  const TICKER = 'tsla'
+  const TICKER = 'rbl.ax'
 
   const lifxService = new l.LifxService
   const yahooFinance = new y.YahooFinance
