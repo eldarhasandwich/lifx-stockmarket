@@ -6,11 +6,13 @@ const main = async () => {
 
   const TICKER = 'rbl.ax'
 
-  const lifxService = new l.LifxService
-  const yahooFinance = new y.YahooFinance
+  const yahooFinance = new y.YahooFinance()
+  const lifxService = new l.LifxService({
+    clientId: process.env.LIFX_CLIENT_ID
+  })
 
-  const lights = await lifxService.ListLights()
   const quote = await yahooFinance.QueryTicker(TICKER)
+  const lights = await lifxService.ListLights()
 
   lights.forEach(light => {
     lifxService.SetLightColor(

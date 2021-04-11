@@ -1,14 +1,22 @@
 
 import * as agent from 'superagent'
 
+interface Config {
+  clientId: string
+}
+
 export class LifxService {
-  constructor() {}
+  config: Config
+
+  constructor(config: Config) {
+    this.config = config
+  }
 
   async ListLights (selector?: string) {
 
     const response = await agent
       .get(`https://api.lifx.com/v1/lights/${ selector || 'all' }`)
-      .set('Authorization', `Bearer ${process.env.LIFX_CLIENT_ID}`)
+      .set('Authorization', `Bearer ${this.config.clientId}`)
 
     const list = JSON.parse(response.text)
 
@@ -19,7 +27,7 @@ export class LifxService {
 
     const response = await agent
       .put(`https://api.lifx.com/v1/lights/${uuid}/state`)
-      .set('Authorization', `Bearer ${process.env.LIFX_CLIENT_ID}`)
+      .set('Authorization', `Bearer ${this.config.clientId}`)
       .send({
         color
       })
